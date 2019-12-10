@@ -1,0 +1,11 @@
+pipeline {
+   agent any{
+   stages{
+   stage ('build code'){
+   echo 'build code succesfull'
+    sh './grandlew build --no-daemon'
+         archiveArtifacts artifacs: 'dist/trainSchedule.zip'
+       }
+     }
+  }
+}
